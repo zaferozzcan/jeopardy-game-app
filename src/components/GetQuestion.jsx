@@ -1,17 +1,17 @@
 import React, { Component } from "react";
 
 export default class GetQuestion extends Component {
+  constructor() {
+    super();
+    this.getQuestions = this.getQuestions.bind(this);
+  }
   getQuestions(event) {
-    event.preventDefault();
     fetch("http://jservice.io/api/random")
       .then((response) => {
         return response.json();
       })
       .then(
-        (json) =>
-          this.setState({
-            questions: json,
-          }),
+        (json) => this.props.getQuestion(json),
         (err) => console.log(err)
       );
   }
@@ -19,8 +19,12 @@ export default class GetQuestion extends Component {
     return (
       <div className="get-question">
         <h1>Let's Play</h1>
-        <form onSubmit={this.getQuestions}>
-          <input type="submit" value="Get Question" />
+        <form>
+          <input
+            onClick={this.getQuestions}
+            type="button"
+            value="Get Question"
+          />
         </form>
       </div>
     );

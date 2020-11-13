@@ -22,3 +22,13 @@ main {
   color: white;
   transform: translateY(30px);
 }
+
+/* score-group */
+.score-group {
+  transform: translateY(30px);
+}
+
+/* get-question */
+.get-question {
+  transform: translateY(30px);
+}
