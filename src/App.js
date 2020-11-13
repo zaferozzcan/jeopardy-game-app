@@ -15,20 +15,35 @@ export default class App extends Component {
     };
 
     // bind
-    this.getQuestion = this.getQuestion.bind();
+    this.getQuestion = this.getQuestion.bind(this);
+    this.questionReveall = this.questionReveall(this);
+  }
+
+  questionReveall() {
+    this.setState({
+      questionReveal: !this.state.questionReveal,
+    });
   }
 
   getQuestion(q) {
-    console.log(q);
+    this.setState({
+      questions: q,
+    });
   }
   render() {
+    console.log(this.state.questions);
     return (
       <div className="App">
         <main id="game-board">
-          <h1 className="game-board-header">Welcome to Jeopardy</h1>
-          <ScoreGroup />
-          <GetQuestion getQuestion={this.getQuestion} />
-          <QuestionGroup />
+          <div>
+            <h1 className="game-board-header">Welcome to Jeopardy</h1>
+            <ScoreGroup score={this.state.score} />
+            <GetQuestion getQuestion={this.getQuestion} />
+            <QuestionGroup
+              reveal={this.questionReveall}
+              question={this.state.questions}
+            />
+          </div>
         </main>
       </div>
     );

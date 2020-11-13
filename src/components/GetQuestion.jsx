@@ -5,7 +5,7 @@ export default class GetQuestion extends Component {
     super();
     this.getQuestions = this.getQuestions.bind(this);
   }
-  getQuestions(event) {
+  getQuestions() {
     fetch("http://jservice.io/api/random")
       .then((response) => {
         return response.json();

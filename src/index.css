@@ -1,18 +1,18 @@
-/* general */
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@100;400&display=swap");
+/* generic */
+
 body {
   margin: 0;
-  font-family: "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
+  font-family: "Big Shoulders Stencil Text", cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* game-board */
 main {
   margin: 0 auto;
   background-color: darkslategrey;
-  width: 150vmin;
-  height: 150vmin;
+  width: 130vmin;
+  height: 120vmin;
   text-align: center;
   border-radius: 10px;
 }
@@ -20,15 +20,63 @@ main {
 /* game-board */
 .game-board-header {
   color: white;
-  transform: translateY(30px);
+  transform: translateY(25px);
+}
+
+#game-board div {
+  transform: translateY(70px);
 }
 
 /* score-group */
 .score-group {
-  transform: translateY(30px);
+  transform: translateY(25px);
 }
 
 /* get-question */
 .get-question {
-  transform: translateY(30px);
+  transform: translateY(25px);
+}
+
+/* question-group-cat-pts  */
+.question-group-cat-pts {
+  transform: translateY(55px);
+}
+
+/* question-group-qts */
+
+.question-group-qts {
+  transform: translateY(80px);
+}
+
+/* span */
+
+span {
+  color: white;
+}
+
+.span-header {
+  color: burlywood;
+  font-size: xx-large;
+}
+
+/* buttons */
+
+.button-pink {
+  background-color: rgb(224, 134, 149);
+}
+.button-blue {
+  background-color: royalblue;
+}
+
+.button-red {
+  background-color: tomato;
+}
+
+.score-group-button {
+  margin-right: 2px;
+  width: 80px;
+  height: 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 1 blue;
 }
