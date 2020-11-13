@@ -12,14 +12,14 @@ export default class App extends Component {
     };
 
     // bind
-    this.getQuestions = this.getQuestions.bind(this);
   }
 
   render() {
     return (
       <div className="App">
-        <main id="game-board"></main>
-        <h1>Welcome to Jeopardy</h1>
+        <main id="game-board">
+          <h1 className="game-board-header">Welcome to Jeopardy</h1>
+        </main>
       </div>
     );
   }
